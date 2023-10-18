@@ -1,0 +1,54 @@
+/* importando fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Oswald&display=swap');
+
+:root {
+    /* Variáveis Cores globais */
+    --cor-secundaria: #ffffff;
+    --cor-terciaria: #1d1d1d;
+    --cor-neutra: #9b9b9b;
+    --cor-principal: #7d00af;
+    /*#9d13af*/
+    --cor-principal-texto: #b175ff;
+    /*#e51cff*/
+    --cor-secundaria-texto: #ffffff;
+    --cor-terciaria-texto: #000000;
+
+    /* Fontes */
+    --tamanho-fonte: 1rem;
+    --estilo-fonte-primario: 'Oswald', sans-serif;
+    --estilo-fonte-secundario: 'Didact Gothic', sans-serif;
+    --espacamento-estilo-pequeno: 0.2rem;
+    --espacamento-estilo-medio: 0.4rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    /* resetando as medidas do css */
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--cor-terciaria) !important;
+    box-sizing: border-box;
+}
+
+#inicio{
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.home__letreiro{
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
