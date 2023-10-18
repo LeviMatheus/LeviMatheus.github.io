@@ -4,7 +4,7 @@
 :root {
     /* Variáveis Cores globais */
     --cor-secundaria: #ffffff;
-    --cor-terciaria: #1d1d1d;
+    --cor-terciaria: #141414;
     --cor-neutra: #9b9b9b;
     --cor-principal: #c50000d5;
     /*#9d13af*/
@@ -14,7 +14,8 @@
     --cor-terciaria-texto: #000000;
 
     /* Fontes */
-    --tamanho-fonte: 1rem;
+    --tamanho-fonte-letras: 10rem;
+    --tamanho-fonte-padrao: 1rem;
     --estilo-fonte-primario: 'Bebas Neue', sans-serif;
     --espacamento-estilo-pequeno: 0.2rem;
     --espacamento-estilo-medio: 0.4rem;
@@ -48,5 +49,23 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+@media (max-width: 720px) { /* ajustar navegação quando resolução mínima 450  */
+    .home__letreiro{
+        height: 100vh;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.home__letreiro__letra {
+    color: var(--cor-secundaria-texto);
+    font-size: var(--tamanho-fonte-letras);
+    font-family: var(--estilo-fonte-primario);
 }

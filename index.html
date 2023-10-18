@@ -26,15 +26,25 @@
 </head>
 
 <body>
+    <!-- Audio -->
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="assets/sound/tech.mp3" type="audio/mpeg">
+    </audio>
     <!-- Home -->
     <main>
         <section class="section__home" id="home">
             <div class="container-fluid">
                 <div class="row">
+                    <button id="botaoMudo" onclick="toggleAudio()">Mudo</button>
+                </div>
+                <div class="row">
                     <div class="col-md-12 home__letreiro">
-                        <img src="assets/PNG 2x/heart.png" alt="Icone Coração">
-                        <img src="assets/PNG 2x/x.png" alt="Icone X">
-                        <img src="assets/PNG 2x/robot.png" alt="Icone Robô">
+                        <!-- <img src="assets/PNG 2x/my-L.png" alt="Icone L">
+                        <img src="assets/PNG 2x/my-x.png" alt="Icone X">
+                        <img src="assets/PNG 2x/my-Robot.png" alt="Icone Robô"> -->
+                        <p class="home__letreiro__letra" id="primeira_letra">L</p>
+                        <p class="home__letreiro__letra" id="segunda_letra">E</p>
+                        <p class="home__letreiro__letra" id="terceira_letra">V</p>
                     </div>
                 </div>
             </div>
