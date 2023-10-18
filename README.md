@@ -1,12 +1,12 @@
-# marialuizabeauty-spa
+# LD+R Levi, Dev & Robots
 
 Página single page para meu portifólio Dev
 
 <p>*logo semelhante a LDR
-*aparece somenteo outline ao redor
+*aparece somente o outline ao redor
 *depois aparece o logo
 *glitch
-*aparece o logo</p>
+*aparece o logo rolando igual cassino</p>
 
 <p> Em construção </p>
 
