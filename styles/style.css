@@ -1,6 +1,5 @@
 /* importando fonts */
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Didact+Gothic&family=Oswald&display=swap');
 
 :root {
     /* Variáveis Cores globais */
@@ -16,8 +15,7 @@
 
     /* Fontes */
     --tamanho-fonte: 1rem;
-    --estilo-fonte-primario: 'Oswald', sans-serif;
-    --estilo-fonte-secundario: 'Didact Gothic', sans-serif;
+    --estilo-fonte-primario: 'Bebas Neue', sans-serif;
     --espacamento-estilo-pequeno: 0.2rem;
     --espacamento-estilo-medio: 0.4rem;
 }
