@@ -53,10 +53,33 @@ function toggleAudio() {
     if (backgroundMusic.muted) {
         backgroundMusic.muted = false;
         backgroundMusic.play();
-        botaoMudo.textContent = 'O';
     } else {
         backgroundMusic.muted = true;
-        botaoMudo.textContent = 'X';
+    }
+    console.log("Mute: ",backgroundMusic.muted)
+}
+//#endregion
+
+//#region Controle de tela
+function toggleTheme() {
+    const body = document.querySelector('body');
+    const icones = document.getElementsByClassName('home__container__divBotoes__btn__img');
+    const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+
+    if (currentTheme === 'light') {
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
+        for (let i = 0; i < icones.length; i++) {
+            icones[i].classList.remove('light-theme');
+            icones[i].classList.add('dark-theme');
+        }
+    } else {
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
+        for (let i = 0; i < icones.length; i++) {
+            icones[i].classList.remove('dark-theme');
+            icones[i].classList.add('light-theme');
+        }
     }
 }
 //#endregion

@@ -3,15 +3,8 @@
 
 :root {
     /* Variáveis Cores globais */
-    --cor-secundaria: #ffffff;
-    --cor-terciaria: #141414;
-    --cor-neutra: #9b9b9b;
-    --cor-principal: #c50000d5;
-    /*#9d13af*/
-    --cor-principal-texto: #dd5151;
-    /*#e51cff*/
-    --cor-secundaria-texto: #ffffff;
-    --cor-terciaria-texto: #000000;
+    --cor-branco: #ffffff;
+    --cor-preto: #141414;
 
     /* Fontes */
     --tamanho-fonte-letras: 10rem;
@@ -19,6 +12,16 @@
     --estilo-fonte-primario: 'Bebas Neue', sans-serif;
     --espacamento-estilo-pequeno: 0.2rem;
     --espacamento-estilo-medio: 0.4rem;
+}
+
+.light-theme{
+    color: var(--cor-preto) !important;
+    background-color: var(--cor-branco) !important;
+}
+
+.dark-theme{
+    color: var(--cor-branco) !important;
+    background-color: var(--cor-preto) !important;
 }
 
 html {
@@ -33,16 +36,15 @@ html {
 
 body {
     overflow-x: hidden;
-    background-color: var(--cor-terciaria) !important;
     box-sizing: border-box;
 }
 
-#inicio{
+.home {
     height: 100vh;
     box-sizing: border-box;
 }
 
-.home__letreiro{
+.home__container__letreiro {
     height: 100vh;
     box-sizing: border-box;
     display: flex;
@@ -52,20 +54,51 @@ body {
     justify-content: space-around;
 }
 
-@media (max-width: 720px) { /* ajustar navegação quando resolução mínima 450  */
-    .home__letreiro{
+.home__container__divBotoes{
+    z-index: 99;
+    right: 8px;
+    top:8px;
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 720px) {
+
+    /* ajustar navegação quando resolução mínima 450  */
+    .home__container__letreiro {
         height: 100vh;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
+    }
+
+    #seta_menor,
+    #seta_maior {
+        display: none;
     }
 }
 
-.home__letreiro__letra {
-    color: var(--cor-secundaria-texto);
+.home__container__letreiro__letra {
     font-size: var(--tamanho-fonte-letras);
     font-family: var(--estilo-fonte-primario);
+}
+
+.home__container__divBotoes__btn {
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+    padding: 4px 8px;
+}
+
+.home__container__divBotoes__btn__img{
+    height: 24px;
+    width: 24px;
 }
