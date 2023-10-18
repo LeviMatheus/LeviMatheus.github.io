@@ -52,12 +52,11 @@ function toggleAudio() {
 
     if (backgroundMusic.muted) {
         backgroundMusic.muted = false;
-        botaoMudo.textContent = 'X';
+        backgroundMusic.play();
+        botaoMudo.textContent = 'O';
     } else {
         backgroundMusic.muted = true;
-        botaoMudo.textContent = 'O';
+        botaoMudo.textContent = 'X';
     }
 }
-
-toggleAudio();
 //#endregion
