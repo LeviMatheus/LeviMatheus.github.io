@@ -58,4 +58,6 @@ function toggleAudio() {
         botaoMudo.textContent = 'O';
     }
 }
+
+toggleAudio();
 //#endregion
