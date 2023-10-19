@@ -46,40 +46,47 @@ trocarLetras();
 //#endregion
 
 //#region Controle de audio
+function checarSom(){
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    return backgroundMusic.muted;
+}
+
 function toggleAudio() {
     const backgroundMusic = document.getElementById('backgroundMusic');
-    const botaoMudo = document.getElementById('botaoMudo');
-
-    if (backgroundMusic.muted) {
-        backgroundMusic.muted = false;
+    const svgAudio = document.getElementById('svg_audio');
+    if(checarSom()){
+        svgAudioOn = '<path d="M33 15L18 27H6V45H18L33 57V15Z" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M57.21 14.79C62.8341 20.4158 65.9936 28.0451 65.9936 36C65.9936 43.9549 62.8341 51.5842 57.21 57.21M46.62 25.38C49.4321 28.1929 51.0118 32.0075 51.0118 35.985C51.0118 39.9625 49.4321 43.7771 46.62 46.59" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>';
+        svgAudio.innerHTML = svgAudioOn;
         backgroundMusic.play();
-    } else {
-        backgroundMusic.muted = true;
+    }else{
+        svgMutado = '<path d="M33 15L18 27H6V45H18L33 57V15Z" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M69 27L51 45" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M51 27L69 45" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>';
+        svgAudio.innerHTML = svgMutado;
     }
-    console.log("Mute: ",backgroundMusic.muted)
+    backgroundMusic.muted = !backgroundMusic.muted;
 }
 //#endregion
 
 //#region Controle de tela
-function toggleTheme() {
+function checarTema(){
     const body = document.querySelector('body');
-    const icones = document.getElementsByClassName('home__container__divBotoes__btn__img');
     const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+    return currentTheme;
+}
 
-    if (currentTheme === 'light') {
+function toggleTema() {
+    const body = document.querySelector('body');
+    const img_tema = document.getElementById('svg_tema');
+
+    if (checarTema() === 'light') {
+        //Mudar para tema escuro
         body.classList.remove('light-theme');
         body.classList.add('dark-theme');
-        for (let i = 0; i < icones.length; i++) {
-            icones[i].classList.remove('light-theme');
-            icones[i].classList.add('dark-theme');
-        }
+        img_tema.setAttribute('src', 'assets/SVG/tema_escuro.svg');
     } else {
+        //Mudar para tema claro
         body.classList.remove('dark-theme');
         body.classList.add('light-theme');
-        for (let i = 0; i < icones.length; i++) {
-            icones[i].classList.remove('dark-theme');
-            icones[i].classList.add('light-theme');
-        }
+        img_tema.setAttribute('src', 'assets/SVG/tema_claro.svg');
     }
 }
 //#endregion

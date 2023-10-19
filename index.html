@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="styles/themify-icons.css">
 </head>
 
-<body>
+<body class="light-theme">
     <!-- Audio -->
     <audio id="backgroundMusic" loop muted>
         <source src="https://raw.githubusercontent.com/LeviMatheus/LeviMatheus.github.io/master/assets/sound/tech.mp3" type="audio/mpeg">
@@ -36,11 +36,16 @@
             <div class="container-fluid home__container">
                 <!-- Div flutuante -->
                 <div class="home__container__divBotoes">
-                    <span class="home__container__divBotoes__btn" id="botaoMudo" onclick="toggleAudio()">
-                        <img class="home__container__divBotoes__btn__img" src="assets/SVG/volume_mute_claro.svg" alt="">
+                    <span class="home__container__divBotoes__btn" onclick="toggleAudio()">
+                        <!-- <img class="home__container__divBotoes__btn__img" id="img_volume" src="assets/SVG/volume_mute_claro.svg" alt=""> -->
+                        <svg id="svg_audio" width="24" height="24" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M33 15L18 27H6V45H18L33 57V15Z" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M69 27L51 45" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M51 27L69 45" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </span>
-                    <span class="home__container__divBotoes__btn" id="botaoTela" onclick="toggleTheme()">
-                        <img class="home__container__divBotoes__btn__img" src="assets/SVG/tema_escuro.svg" alt="">
+                    <span class="home__container__divBotoes__btn" onclick="toggleTema()">
+                        <img class="home__container__divBotoes__btn__img" id="svg_tema" src="assets/SVG/tema_claro.svg" alt="">
                     </span>
                 </div>
                 <!-- Letreiro -->
