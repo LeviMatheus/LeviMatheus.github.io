@@ -24,6 +24,15 @@ function trocarLetras() {
         const letreiro = letreiros[index];
 
         // Atualiza o conteúdo dos elementos com as letras da sequência atual
+        // setTimeout(function() {
+        //     letra1.innerText = letreiro[0];
+        // }, 1000);
+        // setTimeout(function() {
+        //     letra2.innerText = letreiro[1];
+        // }, 1500);
+        // setTimeout(function() {
+        //     letra3.innerText = letreiro[2];
+        // }, 2000);
         letra1.innerText = letreiro[0];
         letra2.innerText = letreiro[1];
         letra3.innerText = letreiro[2];
@@ -55,18 +64,18 @@ function toggleAudio() {
     const backgroundMusic = document.getElementById('backgroundMusic');
     const svgAudio = document.getElementById('svg_audio');
     if(checarSom()){
-        svgAudioOn = '<path d="M33 15L18 27H6V45H18L33 57V15Z" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M57.21 14.79C62.8341 20.4158 65.9936 28.0451 65.9936 36C65.9936 43.9549 62.8341 51.5842 57.21 57.21M46.62 25.38C49.4321 28.1929 51.0118 32.0075 51.0118 35.985C51.0118 39.9625 49.4321 43.7771 46.62 46.59" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>';
-        svgAudio.innerHTML = svgAudioOn;
+        backgroundMusic.volume = 0.1;
         backgroundMusic.play();
+        svgAudio.style.transform = 'rotate(180deg)';
     }else{
-        svgMutado = '<path d="M33 15L18 27H6V45H18L33 57V15Z" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M69 27L51 45" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M51 27L69 45" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>';
-        svgAudio.innerHTML = svgMutado;
+        svgAudio.style.transform = 'rotate(0deg)';
     }
     backgroundMusic.muted = !backgroundMusic.muted;
 }
 //#endregion
 
-//#region Controle de tela
+//#region Controle de tema
+
 function checarTema(){
     const body = document.querySelector('body');
     const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
@@ -81,12 +90,24 @@ function toggleTema() {
         //Mudar para tema escuro
         body.classList.remove('light-theme');
         body.classList.add('dark-theme');
-        img_tema.setAttribute('src', 'assets/SVG/tema_escuro.svg');
+        definirCor("#FFFFFF");
     } else {
         //Mudar para tema claro
         body.classList.remove('dark-theme');
         body.classList.add('light-theme');
-        img_tema.setAttribute('src', 'assets/SVG/tema_claro.svg');
+        definirCor("#000000");
+    }
+}
+//#endregion
+
+//#region Controle de cor
+function definirCor(corHexa){
+    lista_svgs = document.getElementsByClassName("svg_path");
+    svgTema = document.getElementById("svgTema");
+
+    svgTema.setAttribute('fill',corHexa);
+    for(svg of lista_svgs){
+        svg.setAttribute('stroke',corHexa);
     }
 }
 //#endregion

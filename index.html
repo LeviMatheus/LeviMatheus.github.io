@@ -34,18 +34,21 @@
     <main>
         <section class="home">
             <div class="container-fluid home__container">
-                <!-- Div flutuante -->
-                <div class="home__container__divBotoes">
-                    <span class="home__container__divBotoes__btn" onclick="toggleAudio()">
-                        <!-- <img class="home__container__divBotoes__btn__img" id="img_volume" src="assets/SVG/volume_mute_claro.svg" alt=""> -->
+                <!-- Audio/Tema flutuante -->
+                <div class="home__container__audioTema">
+                    <!-- Audio -->
+                    <span class="home__container__audioTema__btn" onclick="toggleAudio()">
                         <svg id="svg_audio" width="24" height="24" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M33 15L18 27H6V45H18L33 57V15Z" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M69 27L51 45" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M51 27L69 45" stroke="#1D1D1D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                            <path class="svg_path" d="M45 18L45 57L9 63L9 24" stroke="black" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path class="svg_path" d="M54 9C49.0294 9 45 13.0294 45 18C45 22.9706 49.0294 27 54 27C58.9706 27 63 22.9706 63 18C63 13.0294 58.9706 9 54 9Z" stroke="black" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path class="svg_path" d="M18 15C13.0294 15 9 19.0294 9 24C9 28.9706 13.0294 33 18 33C22.9706 33 27 28.9706 27 24C27 19.0294 22.9706 15 18 15Z" stroke="black" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                         
                     </span>
-                    <span class="home__container__divBotoes__btn" onclick="toggleTema()">
-                        <img class="home__container__divBotoes__btn__img" id="svg_tema" src="assets/SVG/tema_claro.svg" alt="">
+                    <!-- Tema -->
+                    <span class="home__container__audioTema__btn" onclick="toggleTema()">
+                        <svg width="24" height="24" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="svg_path" id="svgTema" cx="22.5" cy="22.5" r="22.5" fill="#1D1D1D"/>
+                        </svg>                            
                     </span>
                 </div>
                 <!-- Letreiro -->

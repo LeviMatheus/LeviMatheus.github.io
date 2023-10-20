@@ -32,6 +32,7 @@ html {
     /* resetando as medidas do css */
     padding: 0;
     margin: 0;
+    /* border: 1px solid red !important; */
 }
 
 body {
@@ -54,7 +55,7 @@ body {
     justify-content: space-around;
 }
 
-.home__container__divBotoes{
+.home__container__audioTema{
     z-index: 99;
     right: 8px;
     top:8px;
@@ -91,14 +92,14 @@ body {
     font-family: var(--estilo-fonte-primario);
 }
 
-.home__container__divBotoes__btn {
+.home__container__audioTema__btn {
     box-sizing: border-box;
     height: auto;
     width: auto;
     padding: 4px 8px;
 }
 
-.home__container__divBotoes__btn__img{
+.home__container__audioTema__btn__img{
     height: 24px;
     width: 24px;
 }
