@@ -1,12 +1,4 @@
-# LD+R Levi, Dev & Robots
-
-Página single page para meu portifólio Dev
-
-<p>*logo semelhante a LDR
-*aparece somente o outline ao redor
-*depois aparece o logo
-*glitch
-*aparece o logo rolando igual cassino</p>
+# LD+R Levi, Desenvolvimento & RPA
 
 <p> Em construção </p>
 
